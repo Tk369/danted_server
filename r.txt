@@ -1,0 +1,18 @@
+如需在14版本的Ubuntu上安装danted-server,则需要更改配置文件语法
+否则会各种报语法错误
+需要首先升级linux内核详见内核升级文章,然后再单独安装deb包,注意包架构问题是x86_64的还是arm的还是i386的,选择新版本的包
+并且使用新版本的配置文件即可完成socks配置
+
+在这片博客最后有讲过
+https://tech.tiq.cc/2012/06/how-to-set-up-danted-dante-server-socks-proxy-on-linuxdebian-with-authentication/
+
+
+卸载干净包命令
+apt-get --purge remove dante-server
+注意重要的是--purge参数
+
+在某云的服务器上无法使用sudo所以直接安装deb包即可
+dpkg -i *.deb
+完事之后编写配置文件
+
+
